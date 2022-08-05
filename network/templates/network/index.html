@@ -1,0 +1,62 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+<div id="page-view">
+    <div id="all-posts">
+        <h1>All Posts</h1>
+        {% if user.is_authenticated %}
+        <form>
+            <div id="new-post">
+                <h3>New Post</h3>
+                <textarea id="post-text" type="text"> </textarea>
+                <button id="post-submit-btn" type="submit">Post</button>
+            </div>
+        </form>
+        {% endif %}
+    </div>
+
+    <div id="profile-view">
+        <div>
+            <h1 id="username"></h1>
+            <h4 id="follower-count"></h4>
+        </div>
+        {% if user.is_authenticated %}
+        <div>
+            <button id="follow-btn">Follow</button>
+            <button id="unfollow-btn">Unfollow</button>
+        </div>
+        {% endif %}
+
+    </div>
+
+    <div id="following-view">
+        <h1>Following</h1>
+    </div>
+
+    <div id="page-btns">
+        <nav>
+            <ul class="pagination justify-content-end">
+                <li class="page-item">
+                    <a class="page-link" id="prev-btn" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                </li>
+                <h1 id="current-page">1</h1>
+                <div id="pg-number-btn">
+
+                </div>
+                <li class="page-item">
+                    <a class="page-link" id="next-btn" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="feed-posts">
+
+    </div>
+    <!-- <div id="feed-page-btns">
+        <button id="next-pg-btn">Next Page</button>
+        <button id="prev-pg-btn">Back</button>
+    </div> -->
+</div>
+
+{% endblock %}

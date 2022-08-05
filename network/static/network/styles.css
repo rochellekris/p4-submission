@@ -1,0 +1,36 @@
+#page-view {
+  padding: 10px;
+  margin: 10px;
+}
+
+#new-post {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  border-radius: 2px;
+  padding: 10px;
+  margin: 5px;
+}
+
+#post-submit-btn {
+  width: max-content;
+  margin-top: 5px;
+  background-color: #1b74e4;
+  color: white;
+  border: #1b74e4;
+  border-radius: 2px;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#feed-posts {
+  padding: 10px;
+  margin: 5px;
+} 
+
+
+#pg-number-btn {
+  display: flex;
+  flex-direction: row;
+}
